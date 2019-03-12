@@ -7,10 +7,16 @@ library(gridExtra)
 library(gtable)
 library(grid)
 
-#High level this script is trying to teeze out what of our model 6 risk portfolios came from 
+#High level this script is trying to teeze out what of our model 6 risk came from 
 #Mincorr momentum, Technical Indicators, Strategic Asset Allocation, and Tactical Shifts.
-#I go throw and enter the monthly allocation for each component of the portfolio and then combine vs.
+#I go through and enter the monthly allocation for each component of the portfolio and then combine vs.
 #risk 6 model benchmark to see where value was added or subtracted and see where we can improve
+
+#The Risk 6 Model Risk Blend is composed of 80% global stocks/10% global bonds/10% global alternative assets, 
+#as represented by the FTSE Global All Cap Equity Index (proxied by the Vanguard Total World Stock ETF, ticker VT), 
+#the Barclays Global Aggregate Bond Index (proxied by Vanguard Total International Bond ETF, ticker BNDX and iShares 
+#Core US Aggregate Bond, Ticker AGG) and the Hedge Fund Research Inc. Fund Weighted Composite Index, as proxied by 
+#Proshares Hedge Replication ETF, ticker HDG											
 
 #the main difference with this script is having the dates of our monthly mincorr meeting reflected in the performance data
 
@@ -2848,8 +2854,8 @@ Total_Performance_technical <- rbind.zoo(January_Performance_technical,
 #combine MinCorr data (may need to import) and total technical/momentum combined adjustment
 #then subtract to see if technicals added/subtracted value
 
-#import MinCorr Data
-load("/Users/downey/Dropbox/Holborn Assets/Coding/R/Working Directory/Portfolios/MinCorr Unconstrained.RData") 
+#import MinCorr Data from Performance Folder in GitHub
+
 
 Momentum_Technical_Performance <- merge(MinCorr_Performance_xts["2018"],Total_Performance_technical)
 Momentum_Technical_Performance$Technical_alpha <- Momentum_Technical_Performance[,2] - Momentum_Technical_Performance[,1]
@@ -3046,6 +3052,7 @@ colnames(Alternative_ETFs_MFs_merged_returns) <- c("Cambria Global Momentum (GMO
                                  "Cambria Tail Risk (TAIL)")
 
 
+#this table will give us an overview of performance and risk for the year for the funds
 
 par(mfrow = c(4,1))
 
@@ -3058,4 +3065,4 @@ end_t<-Sys.time()
 
 print(end_t-start_t)
 
-warnings()
+
