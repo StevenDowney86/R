@@ -52,7 +52,7 @@ Alternative_ETFs_MFs <- c("HDGE",
                       "MFTNX")
 
 #download symbols for MinCorr and Alternative ETFs & MFs
-setDefaults(getSymbols.av, api.key = "YG136Y1AT346MEHI")
+setDefaults(getSymbols.av, api.key = "keyhere")
 getSymbols(MinCorr_Symbols, src = "av", 
            output.size = "full", adjusted = TRUE)
 getSymbols(Alternative_ETFs_MFs, src = "av", 
