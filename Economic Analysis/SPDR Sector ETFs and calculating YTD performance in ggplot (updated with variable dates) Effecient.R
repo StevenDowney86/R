@@ -23,7 +23,7 @@ SPDR_Sector_ETFs <- c("XLY",
 
 
 #download symbols for MinCorr and Alternative ETFs & MFs
-setDefaults(getSymbols.av, api.key = "YG136Y1AT346MEHI")
+setDefaults(getSymbols.av, api.key = "keyhere")
 getSymbols(SPDR_Sector_ETFs, src = "av", 
            output.size = "full", adjusted = TRUE)
 
