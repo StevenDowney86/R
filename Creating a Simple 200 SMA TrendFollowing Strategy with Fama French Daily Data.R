@@ -10,7 +10,7 @@ head(FamaFrench, n = 50)
 #Testing a simple moving average strategy
 
 #download data if needed
-setDefaults(getSymbols.av, api.key = "YG136Y1AT346MEHI")
+setDefaults(getSymbols.av, api.key = "keyhere")
 getSymbols("MSFT", src = "av", 
            output.size = "full", adjusted = TRUE)
 
