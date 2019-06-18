@@ -11,7 +11,7 @@ Symbols_to_Download <- c("VT",
                        "HDG")
 
 #download symbols for MinCorr and Alternative ETFs & MFs
-setDefaults(getSymbols.av, api.key = "YG136Y1AT346MEHI")
+setDefaults(getSymbols.av, api.key = "keyhere")
 getSymbols(Symbols_to_Download, src = "av", 
            output.size = "full", adjusted = TRUE)
 
