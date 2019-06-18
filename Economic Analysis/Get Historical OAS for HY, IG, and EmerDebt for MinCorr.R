@@ -10,7 +10,7 @@ library(grid)
 start <- as.Date("1900-01-01")
 end <- Sys.Date()
 #download data
-HighYieldOAS <- Quandl("ML/HYOAS", api_key="MFiHkkmpYSxDhfZ1ygrU", type = "xts")
+HighYieldOAS <- Quandl("ML/HYOAS", api_key="keyhere", type = "xts")
 ACORP_OAS <- getSymbols("BAMLC0A3CA", src = "FRED", from = start, to = end, auto.assign = FALSE)
 Acorp_Yield <- getSymbols("BAMLC0A3CAEY", src = "FRED", from = start, to = end, auto.assign = FALSE)
 EmergingM_OAS <- getSymbols("BAMLEMPUPUBSLCRPIUSOAS", src = "FRED", from = start, to = end, auto.assign = FALSE)
