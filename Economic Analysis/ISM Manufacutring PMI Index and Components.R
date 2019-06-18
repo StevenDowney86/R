@@ -24,7 +24,7 @@ start <- as.Date("1900-01-01")
 end <- Sys.Date()
 
 #set api key
-Quandl.api_key("MFiHkkmpYSxDhfZ1ygrU")
+Quandl.api_key("keyhere")
 
 #set the indices to download
 ISM_Manufacturing_Indices <- c("ISM/MAN_PMI",
