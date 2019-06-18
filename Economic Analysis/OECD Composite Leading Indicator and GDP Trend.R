@@ -26,11 +26,11 @@ theme_joey <- function () {
 }
 
 GDPTrend <-Quandl("OECD/MEI_CLI_LORSGPRT_USA_M", 
-                  api_key="MFiHkkmpYSxDhfZ1ygrU",
+                  api_key="keyhere",
                   type = "xts")
 
 OECD_LEI <- Quandl("OECD/KEI_LOLITOAA_USA_ST_M", 
-       api_key="MFiHkkmpYSxDhfZ1ygrU", 
+       api_key="keyhere", 
        start_date="1955-01-31")
 
 OECD_LEI_xts <- as.xts(OECD_LEI[,2], order.by = OECD_LEI$Date)
