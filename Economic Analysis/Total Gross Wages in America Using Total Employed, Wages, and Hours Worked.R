@@ -24,7 +24,7 @@ start <- as.Date("1900-01-01")
 end <- Sys.Date()
 
 #set api key
-Quandl.api_key("MFiHkkmpYSxDhfZ1ygrU")
+Quandl.api_key("keyhere")
 
 #get wage and employment details
 Wage_Symbols <- c("FRED/PAYEMS",
